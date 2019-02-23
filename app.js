@@ -21,7 +21,7 @@ var authRoutes = require("./routes/authentication");
 // APP CONFIG
 
 //seedDB(); // seed the database
-mongoose.connect("mongodb+srv://LyndseyDuffield:<h3roku!!>@cluster0-ilhew.mongodb.net/yelp_camp?retryWrites=true", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://LyndseyDuffield:h3roku!!@cluster0-ilhew.mongodb.net/yelp_camp?retryWrites=true", {useNewUrlParser: true});
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
