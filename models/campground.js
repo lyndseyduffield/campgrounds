@@ -2,23 +2,23 @@ var mongoose = require("mongoose");
 
 // CAMPGROUND SCHEMA SETUP
 var campgroundSchema = new mongoose.Schema({
-  name: String, 
+  name: String,
   price: String,
   image: String,
-  description: String, 
+  description: String,
   author: {
     id: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User"
     },
-    username: String,
+    username: String
   },
   comments: [
-      {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "Comment"
-      }
-    ]
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment"
+    }
+  ]
 });
 
 module.exports = mongoose.model("Campground", campgroundSchema);
